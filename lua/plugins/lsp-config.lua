@@ -11,10 +11,11 @@ return {
       require("mason-lspconfig").setup({
         ensure_installed = {
           "lua_ls",
-          "tsserver",
+          "ts_ls",
           "eslint",
           "ruff",
-          "pyright"
+          "pyright",
+          "tailwindcss"
         },
       })
     end,
@@ -28,7 +29,7 @@ return {
       lspconfig.lua_ls.setup({
         capabilities = capabilities,
       })
-      lspconfig.tsserver.setup({
+      lspconfig.ts_ls.setup({
         capabilities = capabilities,
       })
       lspconfig.eslint.setup({
@@ -38,6 +39,9 @@ return {
         capabilities = capabilities,
       })
       lspconfig.pyright.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.tailwindcss.setup({
         capabilities = capabilities,
       })
 
